@@ -292,13 +292,13 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
     //On an iPad, if being presented in a modal view controller by a UINavigationController,
     //at the time we need it, the size of our view will be incorrect.
     //If this is the case, derive our view size from our parent view controller instead
-    UIView *view = nil;
-    if (self.parentViewController == nil) {
-        view = self.view;
-    }
-    else {
-        view = self.parentViewController.view;
-    }
+//    UIView *view = nil;
+//    if (self.parentViewController == nil) {
+    UIView *view = self.view;
+//    }
+//    else {
+//        view = self.parentViewController.view;
+//    }
 
     UIEdgeInsets insets = self.statusBarSafeInsets;
 
