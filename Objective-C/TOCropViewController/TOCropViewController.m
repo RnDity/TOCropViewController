@@ -85,6 +85,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
         self.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         self.modalPresentationStyle = UIModalPresentationFullScreen;
         self.automaticallyAdjustsScrollViewInsets = NO;
+        self.showToolbar = YES;
         self.hidesNavigationBar = true;
         
         // Controller object that handles the transition animation when presenting / dismissing this app
@@ -1052,7 +1053,7 @@ static const CGFloat kTOCropViewControllerToolbarHeight = 44.0f;
 }
 
 - (TOCropToolbar *)toolbar {
-    if (!_toolbar) {
+    if (!_toolbar && _showToolbar) {
         _toolbar = [[TOCropToolbar alloc] initWithFrame:CGRectZero];
         [self.view addSubview:_toolbar];
     }

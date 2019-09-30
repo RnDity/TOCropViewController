@@ -249,6 +249,13 @@
  */
 @property (nonatomic, assign) BOOL aspectRatioPickerButtonHidden;
 
+/**
+ When enabled, shows the toolbar
+ 
+ Default is YES.
+ */
+@property (nonatomic, assign) BOOL showToolbar;
+
 /** 
  If `showActivitySheetOnDone` is true, then these activity items will 
  be supplied to that UIActivityViewController in addition to the 
@@ -337,7 +344,12 @@
  */
 - (void)resetCropViewLayout;
 
-/** 
+/**
+ Rotates crop view clickwise
+ */
+- (void)rotateCropViewClockwise;
+
+/**
  Set the aspect ratio to be one of the available preset options. These presets have specific behaviour
  such as swapping their dimensions depending on portrait or landscape sized images.
  
