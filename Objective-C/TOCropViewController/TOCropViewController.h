@@ -345,9 +345,19 @@
 - (void)resetCropViewLayout;
 
 /**
- Rotates crop view clickwise
+ Rotates crop view clockwise
  */
 - (void)rotateCropViewClockwise;
+
+/**
+ Rotates crop view counterclockwise
+ */
+- (void)rotateCropViewCounterclockwise;
+
+/**
+ Invokes done button tapped behavior
+ */
+-(void)doneButtonTapped;
 
 /**
  Set the aspect ratio to be one of the available preset options. These presets have specific behaviour
